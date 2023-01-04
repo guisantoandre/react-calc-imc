@@ -1,0 +1,249 @@
+:root {
+   --blueDark: #21212f;
+   --blueDarkHover: #363647;
+   --gray: #63636a;
+   --green: #79e9ad;
+   --placeholderText: #c9c3c3;
+   --greenLogo: #0b3b21;
+
+   --titleFont: "Source Sans Pro", sans-serif;
+   --textFont: "Roboto", sans-serif;
+   font-size: 62.5%;
+   --radius: 4px;
+}
+
+p,
+input,
+label {
+   font-size: 1.9rem;
+}
+button,
+h3 {
+   font-size: 2.1rem;
+}
+h2 {
+   font-size: 6.2rem;
+}
+
+.container {
+   max-width: 75%;
+   margin: auto;
+}
+
+header {
+   padding: 7rem 0;
+   display: flex;
+   align-items: center;
+}
+header span {
+   font-size: 1.4rem;
+   color: var(--gray);
+}
+header span a {
+   color: var(--blueDark);
+}
+.logo {
+   font-family: var(--titleFont);
+   font-size: 2.4rem;
+   font-weight: 600;
+   color: var(--greenLogo);
+   background-color: var(--green);
+   border-radius: var(--radius);
+   padding: 0.8rem 1.3rem;
+   display: flex;
+   gap: 1rem;
+   margin-right: 1rem;
+   cursor: default;
+}
+
+.sectionWrapper {
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   gap: 0 7rem;
+}
+.leftSide h2 {
+   color: var(--blueDark);
+   margin-bottom: 2rem;
+   font-family: var(--titleFont);
+   line-height: 1;
+}
+.leftSide p {
+   color: var(--gray);
+   margin-bottom: 1rem;
+}
+.leftSide .inputContainer {
+   padding: 2rem 0 0 0;
+}
+.inputContainer .inputWrapper {
+   margin-bottom: 2rem;
+   padding-right: 1rem;
+   display: grid;
+   grid-template-columns: 60px 1fr;
+   align-items: center;
+   gap: 0 1rem;
+   position: relative;
+}
+.inputWrapper label {
+   font-family: var(--titleFont);
+   font-weight: 700;
+}
+.inputWrapper input {
+   padding: 1rem;
+   margin-left: 1rem;
+   border: none;
+   border-bottom: 2px solid var(--gray);
+   transition: 0.3s ease;
+}
+.inputWrapper input::placeholder {
+   color: var(--placeholderText);
+}
+.inputWrapper input:focus {
+   border-bottom: 2px solid var(--green);
+}
+.inputWrapper input:focus {
+   outline: none;
+}
+.inputWrapper::after {
+   position: absolute;
+   top: 10px;
+   right: 0;
+   font-family: var(--titleFont);
+   color: var(--blueDark);
+   font-size: 1.9rem;
+   font-weight: 700;
+   margin-right: 2rem;
+   transition: 0.3s ease;
+}
+.inputWrapper:focus-within::after {
+   color: var(--green);
+}
+.inputWrapper input:disabled {
+   opacity: 0.5;
+}
+.inputWrapper:nth-child(1)::after {
+   content: "m";
+}
+.inputWrapper:nth-child(2)::after {
+   content: "kg";
+}
+/* Remove arrows/spinners from input type number */
+input[type="number"] {
+   appearance: textfield;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+   -webkit-appearance: none;
+   margin: 0;
+}
+button {
+   border: none;
+   background-color: var(--blueDark);
+   color: #eee;
+   padding: 1rem 3rem;
+   border-radius: var(--radius);
+   font-family: var(--titleFont);
+   cursor: pointer;
+   transition: 0.3s ease;
+   margin-top: 2rem;
+}
+button:hover {
+   background-color: var(--blueDarkHover);
+}
+button:disabled {
+   opacity: 0.5;
+   cursor: default;
+}
+
+.rightSide {
+   display: flex;
+   flex: 1;
+}
+.rightSide .cardWrapper {
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   gap: 2rem;
+   flex: 1;
+}
+.rightSide .cardResult {
+   display: flex;
+   flex: 1;
+   position: relative;
+}
+.cardResult code:first-of-type {
+   font-size: 2.2rem;
+   margin-bottom: 2rem;
+}
+.cardResult > span {
+   background-color: var(--blueDark);
+   position: absolute;
+   padding: 0.7rem;
+   border-radius: 50%;
+   top: 50%;
+   left: -5%;
+   transform: translate(5%, -50%);
+   cursor: pointer;
+   transition: 0.3s ease;
+}
+.cardResult > span:hover {
+   background-color: var(--blueDarkHover);
+}
+.cardResult .btnBackHome {
+   font-size: 4rem;
+   color: #eee;
+}
+
+footer {
+   text-align: center;
+   padding: 10rem 0;
+}
+footer p {
+   font-size: 1.6rem;
+}
+footer a {
+   font-size: 2.2rem;
+   color: var(--blueDark);
+   font-family: var(--titleFont);
+   background-color: rgba(0, 0, 0, 0.1);
+   border-radius: var(--radius);
+   padding: 0.5rem 0.6rem;
+}
+
+@media (max-width: 1260px) {
+   .sectionWrapper {
+      grid-template-columns: 1fr;
+      gap: 5rem 0;
+   }
+
+   .cardResult > span {
+      top: 0;
+      left: 0;
+      transform: translate(0, 0);
+      border-radius: 0 0 4px 0;
+   }
+
+   footer {
+      padding: 3rem 0;
+   }
+}
+
+@media (max-width: 600px) {
+   :root {
+      font-size: 54%;
+   }
+
+   .container {
+      max-width: 85%;
+   }
+
+   header {
+      padding: 4rem 0;
+   }
+
+   .rightSide .cardWrapper {
+      grid-template-columns: 1fr;
+   }
+
+   button {
+      width: 100%;
+   }
+}

@@ -1,0 +1,32 @@
+.card {
+   display: flex;
+   flex-wrap: nowrap;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   flex: 1;
+}
+
+.bgSpan {
+   width: 60px;
+   height: 60px;
+   border-radius: 50%;
+   background-color: rgba(0, 0, 0, 0.1);
+   display: flex;
+   place-content: center; /* abbreviation for align-items and justify-content */
+}
+
+h3 {
+   padding: 1rem 0;
+   font-family: var(--titleFont);
+}
+
+code {
+   font-size: 1.6rem;
+}
+
+@media (max-width: 1260px) {
+   .card {
+      padding: 5rem 0;
+   }
+}
