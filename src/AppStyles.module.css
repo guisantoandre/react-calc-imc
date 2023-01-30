@@ -31,29 +31,25 @@ h2 {
 }
 
 header {
-   padding: 7rem 0;
+   padding: 8rem 0;
    display: flex;
-   align-items: center;
-}
-header span {
-   font-size: 1.4rem;
-   color: var(--gray);
-}
-header span a {
-   color: var(--blueDark);
 }
 .logo {
    font-family: var(--titleFont);
-   font-size: 2.4rem;
+   font-size: 2.2rem;
+   letter-spacing: 1px;
    font-weight: 600;
-   color: var(--greenLogo);
-   background-color: var(--green);
+   color: #eee;
+   background-color: var(--blueDark);
    border-radius: var(--radius);
    padding: 0.8rem 1.3rem;
    display: flex;
    gap: 1rem;
    margin-right: 1rem;
    cursor: default;
+}
+header img {
+   width: 15px;
 }
 
 .sectionWrapper {
@@ -192,26 +188,11 @@ button:disabled {
    color: #eee;
 }
 
-footer {
-   text-align: center;
-   padding: 10rem 0;
-}
-footer p {
-   font-size: 1.6rem;
-}
-footer a {
-   font-size: 2.2rem;
-   color: var(--blueDark);
-   font-family: var(--titleFont);
-   background-color: rgba(0, 0, 0, 0.1);
-   border-radius: var(--radius);
-   padding: 0.5rem 0.6rem;
-}
-
 @media (max-width: 1260px) {
    .sectionWrapper {
       grid-template-columns: 1fr;
       gap: 5rem 0;
+      margin-bottom: 4rem;
    }
 
    .cardResult > span {
@@ -228,7 +209,7 @@ footer a {
 
 @media (max-width: 600px) {
    :root {
-      font-size: 54%;
+      font-size: 50%;
    }
 
    .container {
@@ -236,7 +217,7 @@ footer a {
    }
 
    header {
-      padding: 4rem 0;
+      padding: 5rem 0;
    }
 
    .rightSide .cardWrapper {

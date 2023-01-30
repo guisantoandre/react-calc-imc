@@ -31,14 +31,8 @@ const App = () => {
             <header>
                <h1 className={styles.logo}>
                   <img src={calculatorIcon} alt="Calculator Icon Logo" />
-                  IMCalculator
+                  IMCalc
                </h1>
-               <span>
-                  por{" "}
-                  <a href="https://guisantoandre.github.io/" target="_blank">
-                     guilherme
-                  </a>
-               </span>
             </header>
 
             <div className={styles.sectionWrapper}>
@@ -114,18 +108,6 @@ const App = () => {
                </div>
             </div>
          </div>
-
-         <footer>
-            <p>
-               Informações sobre IMC neste link:{" "}
-               <a
-                  href="https://pt.wikipedia.org/wiki/%C3%8Dndice_de_massa_corporal"
-                  target="_blank"
-               >
-                  IMC
-               </a>
-            </p>
-         </footer>
       </>
    );
 };
